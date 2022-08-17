@@ -44,7 +44,7 @@ $ dotnet run
 
 ## Known Bugs
 
-* Code has been broken, need to update my mysql workbench database
+none
 
 ## License
 [MIT]

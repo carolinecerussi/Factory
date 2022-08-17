@@ -18,14 +18,14 @@ namespace Factory.Controllers
 			_db = db;
 		}
 
-		public ActionResult Index()
+			public ActionResult Index()
 		{
-			List<Engineer> model = _db.Engineers.ToList();
-			return View(model);
+			return View(_db.Engineers.ToList());
 		}
+
 		public ActionResult Create()
 		{
-		return View();
+		return View("Create", "engineers");
 		}
 
 		[HttpPost]
@@ -33,7 +33,7 @@ namespace Factory.Controllers
 		{
 			_db.Engineers.Add(engineer);
 			_db.SaveChanges();
-			return RedirectToAction("Index");
+			return RedirectToAction("Index", "engineers");
 		}
 
 		public ActionResult Details(int id)
