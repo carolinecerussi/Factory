@@ -33,7 +33,14 @@ Another option off the homepage index, is to similarly click into a detailed pag
   }
 }
 
-* navigate to the Factory directory in your terminal, cd to Factory directory, and type dotnet restore, dotnet build, and then dotnet run to run localhost website.
+* navigate to the Factory directory in your terminal, then cd to Factory directory.
+Run the following commands in your terminal:
+$ dotnet restore
+$ dotnet build
+$ dotnet ef migrations add Initial
+$ dotnet ef database update
+$ dotnet run
+
 
 ## Known Bugs
 

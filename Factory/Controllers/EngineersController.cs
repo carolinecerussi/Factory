@@ -5,6 +5,8 @@ using Factory.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+
+
 namespace Factory.Controllers
 {
 	public class EngineersController : Controller 
@@ -18,7 +20,7 @@ namespace Factory.Controllers
 
 		public ActionResult Index()
 		{
-			List<Engineer>model = _db.Engineers.ToList();
+			List<Engineer> model = _db.Engineers.ToList();
 			return View(model);
 		}
 		public ActionResult Create()

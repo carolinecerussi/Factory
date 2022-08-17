@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace Factory.Models
@@ -9,6 +10,7 @@ namespace Factory.Models
 		public Engineer(){
 			this.JoinEntities = new HashSet<EngineerMachine>();
 		}
+		[Key]
 		public int EId {get;set;}
 
 		public string EName {get;set;}
